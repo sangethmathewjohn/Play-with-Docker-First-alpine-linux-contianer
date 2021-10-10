@@ -18,3 +18,7 @@ When you executed the command docker container run hello-world, it also did a do
         docker container run -it alpine /bin/sh
 You are now inside the container running a Linux shell and you can try out a few commands like ls -l, uname -a and others.
 Note that Alpine is a small Linux OS so several commands might be missing. Exit out of the shell and container by typing the exit command
+
+In the steps above we ran several commands via container instances with the help of docker container run. The docker container ls -a command showed us that there were several containers listed. Why are there so many containers listed if they are all from the alpine image?
+
+This is a critical security concept in the world of Docker containers! Even though each docker container run command used the same alpine image, each execution was a separate, isolated container. Each container has a separate filesystem and runs in a different namespace; by default a container has no way of interacting with other containers, even those from the same image. Let’s try another exercise to learn more about isolation.
