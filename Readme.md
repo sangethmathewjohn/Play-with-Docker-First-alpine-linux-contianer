@@ -23,7 +23,7 @@ In the steps above we ran several commands via container instances with the help
 
 This is a critical security concept in the world of Docker containers! Even though each docker container run command used the same alpine image, each execution was a separate, isolated container. Each container has a separate filesystem and runs in a different namespace; by default a container has no way of interacting with other containers, even those from the same image. Let’s try another exercise to learn more about isolation.
 
-### ACCESS CONTAINER
+### Access Containers
         
         docker container start <container ID>
 Container ID is obtained from the command
