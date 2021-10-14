@@ -35,6 +35,9 @@ So we could simply use “3030” to identify the container instance in the exam
 Notice this time that our container instance is still running. We used the ash shell this time so the rather than simply exiting the way /bin/sh did earlier, ash waits for a command. We can send a command in to the container to run by using the exec command, as follows:
         
         docker container exec <container ID> ls
+  
+# note: You cannot exec a container that is not running
+
 To access the shell
         
         docker container exec -it <container ID> /bin/sh
